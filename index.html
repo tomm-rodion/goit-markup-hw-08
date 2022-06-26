@@ -400,6 +400,11 @@
     <!-- Modal windou -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
+            <button type="button" data-modal-close class="modal-icon-close">
+                <svg  width="18px" height="18px">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
             <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
             <form class="modal-form">
                 <label class="modal-lable" for="name">Имя
@@ -440,7 +445,6 @@
                 placeholder="Введите текст"
                 ></textarea>
             </label>
-                <form class="modal-egreement">
                     <label class="modal-checkbox-text" for="egreement">
                         <input type="checkbox" name="egreement" id="egreement" class="input-check"> 
                         <span class="modal-checkbox">
@@ -450,13 +454,7 @@
                         </span><span>Соглашаюсь с рассылкой и принимаю
                             <a class="modal-link" href="">Условия договора</a></span>
                         </label>
-                </form>
-                <button class="button-baner" type="submit">Отправить</button>
-                <button type="button" data-modal-close class="modal-icon-close">
-                    <svg  width="18px" height="18px">
-                        <use href="./images/symbol-defs.svg#icon-close"></use>
-                    </svg>
-                </button>
+                <button class="button-baner" type="submit">Отправить</button>                
             </form>    
         </div>
     </div>
