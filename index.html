@@ -378,23 +378,21 @@
             <!-- Modal form for footer -->
 
             <div class="footer-form">
+                <strong class="footer-form-text">Подпишитесь на рассылку</strong>
                 <form class="footer-form-rotator">
-                    <span class="footer-form-text">Подпишитесь на рассылку</span>
                     <div class="footer-wrap">
-                    <label for="footer-email" class="email-text">
-                    <input 
-                    class="footer-inp" 
-                    type="email" 
-                    name="footer-email" 
-                    id="footer-email" 
-                    placeholder="E-mail">
-                    <button type="submit" class="btn-footer">Подписаться
-                        <svg class="icon-postcard" width="24px" height="24px">
-                            <use href="./images/symbol-defs.svg#icon-postcard"></use>
-                        </svg>
-                    </button>
-                </label>
-            </div>
+                        <input 
+                        class="footer-inp" 
+                        type="email" 
+                        name="footer-email" 
+                        id="footer-email" placeholder=" ">
+                            <label for="footer-email" class="email-text">E-mail</label>
+                    </div>
+            <button type="submit" class="btn-footer">Подписаться
+                <svg class="icon-postcard" width="24px" height="24px">
+                    <use href="./images/symbol-defs.svg#icon-postcard"></use>
+                </svg>
+            </button>
                 </form>
             </div>
         </div>            
@@ -434,14 +432,14 @@
                     <use href="./images/symbol-defs.svg#icon-email-black"></use>
                 </svg>
             </label>
-                <label class="modal-lable" for="coments">Комментарий</label>
+            <label class="modal-message" for="coments">Комментарий
                 <textarea 
                 class="modal-coments" 
                 name="coments" 
+                id="coments"
                 placeholder="Введите текст"
                 ></textarea>
-            </form>
-            <div class="modal-field">
+            </label>
                 <form class="modal-egreement">
                     <label class="modal-checkbox-text" for="egreement">
                         <input type="checkbox" name="egreement" id="egreement" class="input-check"> 
@@ -454,14 +452,12 @@
                         </label>
                 </form>
                 <button class="button-baner" type="submit">Отправить</button>
-            </div>
-                
                 <button type="button" data-modal-close class="modal-icon-close">
                     <svg  width="18px" height="18px">
                         <use href="./images/symbol-defs.svg#icon-close"></use>
                     </svg>
                 </button>
-            
+            </form>    
         </div>
     </div>
     <!-- JS -->
