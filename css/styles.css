@@ -942,14 +942,19 @@ color: #FFFFFF;
     left: 16px;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.6);
+    
+    transition-property: transform color ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-inp:focus + .email-text,
 .footer-inp:not(:placeholder-shown) + .email-text{
     top: 50%;
-    left: -45px;
+    left: -55px;
     transform: translateY(-50%);
     color: var(--accent-color);
+    font-size: 17px;
 }
 
 
