@@ -18,37 +18,36 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- шапка сайта HEADER -->
-    <header class="header-nav">
+    <header class="header">
       <!-- блок навігація HEADER -->
-      <div class="container header-flex">
-        <nav class="header-flex">
+      <div class="container header__container">
+        <nav class="header__container">
           <!-- логотип logo -->
-          <a class="logo link" href="./index.html"><span class="logo-web">Web</span>Studio</a>
+          <a class="logo logo--header" href="./index.html"><span class="logo-web">Web</span>Studio</a>
           <!-- посилання на сорінки -->
-          <ul class="list nav-bar">
-            <li class="nav-item"><a class="nav-link" href="./index.html">Студия</a></li>
-            <li class="nav-item">
-              <a class="nav-link current" href="./portfolio.html">Портфолио</a>
+          <ul class="list nav">
+            <li class="nav__item"><a class="nav__link nav__link--current" href="./index.html">Студия</a></li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--current nav__link--activ" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="">Контакты</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--current" href="">Контакты</a></li>
           </ul>
         </nav>
         <!-- блок с контактами Contact block -->
-        <ul class="list nav-bar">
-          <li class="nav-item">
-              <a class="contact" href="mailto:info@devstudio.com">
-                  <svg class="icon-smartphone" width="16px" height="12px">
+        <ul class="list nav">
+          <li class="nav__item">
+              <a class="nav__link nav__link--contact" href="mailto:info@devstudio.com">
+                  <svg class="nav--icon" width="16px" height="12px">
                       <use href="./images/symbol-defs.svg#icon-envelope"></use>
                   </svg>
                   info@devstudio.com</a></li>
-          <li class="nav-item">
-              <a class="contact" href="tel:380961111111">
-                  <svg class="icon-smartphone" width="10px" height="16px">
+          <li class="nav__item">
+              <a class="nav__link nav__link--contact" href="tel:380961111111">
+                  <svg class="nav--icon" width="10px" height="16px">
                       <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                   </svg>
                   +38 096 111 11 11</a></li>
@@ -60,7 +59,7 @@
       <!-- projects block -->
       <section class="section">
         <div class="container">
-          <h1 class="hide">наши проекты</h1>
+          <h1 class="hidden">наши проекты</h1>
           <!-- buttons block -->
           <ul class="list button-list">
             <li class="buttons-item">

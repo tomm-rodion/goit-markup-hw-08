@@ -1,0 +1,85 @@
+.header{
+    border-bottom: 1px solid #ececec;
+
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+}
+
+// header navigation
+
+.nav {
+    display: flex;
+    margin-left: auto;
+
+    .nav__item + .nav__item{
+        margin-left: 50px;
+    }
+
+    &--icon{
+        margin-right: 10px;
+        fill: currentColor;
+
+        @include animation();
+        transition-property: color, fill;
+    }
+}
+
+.nav__link{
+    display: block;
+    position: relative;
+    padding: 32px 0;
+    @include font(500, 14px, 1.14, 0.02em);
+    color:var(--text-color);
+    @include animation();
+    transition-property: color ; 
+
+&--current::after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+
+    @include animation();
+    transition-property: transform;
+    }
+
+    &--current:hover::after{
+        transform: scaleX(1);
+    }
+
+    &--activ.nav__link--current::after {
+        transform: scaleX(1);
+        color: var(--accent-color);
+        
+    }
+
+    &--contact{
+        color:var(--second-text-color);
+    }
+
+    &:hover,
+    &:focus,
+    &--contact:focus,
+    &--contact:hover,
+    &--activ{
+        color: var(--accent-color);
+    }
+
+    &:hover .nav--icon,
+    &:focus .nav--icon,
+    &--contact:focus .nav--icon,
+    &--contact:hover .nav--icon
+    {
+    fill: var(--accent-color);
+}
+}
+

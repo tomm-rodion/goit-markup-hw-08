@@ -1,12 +1,25 @@
 // Utils
 @import'./utils/vars';
 @import'./utils/variable';
+@import'./utils/mixins';
 
 // Base
 @import'./base/reset';
+@import'./base/base';
+@import'./base/conteiner';
 
 // Components
+@import'./components/btn';
+@import'./components/logo';
 @import'./components/conteiner';
+@import'./components/modal';
 
 // Layouts
 @import'./layout/header';
+@import'./layout/baner';
+@import'./layout/features';
+@import'./layout/works';
+@import'./layout/our-team';
+@import'./layout/clients';
+@import'./layout/footer';
+@import'./layout/portfolio';
