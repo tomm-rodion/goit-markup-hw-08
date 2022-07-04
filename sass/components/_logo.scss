@@ -2,19 +2,26 @@
     display: block;
     padding: 24px 0;
 
-    color: #000000;
+    color: var(--accent-color);
     font-family: 'Raleway', sans-serif;
     @include font(700, 26px, 1.19, 0.03em);
+
+    &--header{
+        margin-right: 92px;
+    }
+
+    &--black {
+        color: #000000;
+    }
+
+    &--white{
+        color: var(--main-color);
+    }
 }
 
-.logo--header{
-    margin-right: 92px;
-}
 
-.logo--web{
-    color: var(--accent-color);
-}
 
-.logo-studio {
-    color: #000000;
-}
+// .logo--web{
+//     color: var(--accent-color);
+// }
+

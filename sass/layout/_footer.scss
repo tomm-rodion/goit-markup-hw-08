@@ -1,84 +1,58 @@
+// FUTER
 
 .footer{
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: var(--second-theme-color); 
-}
+    background-color: var(--second-theme-color);
 
-.footer-conteiner{
-    display: flex;
-    align-items: baseline;
-}
+    &__conteiner{
+        display: flex;
+        align-items: baseline;
+    }
 
-.footer-page{
-    margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
-}
+    &__page{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+    }
 
-.footer-social-list{
-margin-left: 70px;
-margin-right: auto;
-}
+    &__content--styly{
+        font-style: normal;
+    }
 
-.footer-social-title{
-    font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.03em;
-text-transform: uppercase;
+    &__item + .footer__item{
+        margin-top: 9px;
+    }
 
-color: var(--main-color);
-margin-bottom: 20px;
-}
+    &__address{
+        @include font(null, 14px, 1.7, 0.03em);
+        color: var(--main-color);
+    }
 
-.footer-social-list .social-link{
-    background-color: rgba(255, 255, 255, 0.1);
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    &__contact{
+        @include font(null, 14px, 1.7, 0.03em);
+        color: rgba(255, 255, 255, 0.6);
+        transition-property: color;
+        @include animation();
 
-.footer-social-list .social-link:hover{
-    background-color:var(--accent-color);
-}
+        &:focus,
+        &:hover{
+            color: var(--accent-color);
+        }
+    }
 
-.footer-social-list .social-icon{
-    fill: var(--main-color);
-}
-
-.footer-logo{
-    color: var(--main-color);
-}
-.container>.logo{
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.footer-content{
-    font-style: normal;
-}
-
-.address-item+.address-item{
-    margin-top: 9px;
-}
-.footer-address{
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: var(--main-color);
-}
-.footer-contact{
-    font-size: 14px;
-    line-height:1.7;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-contact:focus,
-.footer-contact:hover{
-    color: var(--accent-color);
+    &__social{
+        margin-left: 70px;
+        margin-right: auto;
+    }
+        
+    &__social--color{
+        background-color:  rgba(255, 255, 255, 0.1);
+        color: var(--main-color);
+    
+        &:hover{
+            background-color: var(--accent-color);
+            color: var(--main-color);
+        }
+    }
 }

@@ -1,0 +1,39 @@
+// social  icon
+
+.social{
+    display: flex;
+    justify-content: center ;
+    
+        &__svg{
+            margin-right: 10px;
+        }
+    
+            &__svg:last-child{
+                margin-right: 0px;
+        }
+    
+        &__link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            
+            @include animation();
+            transition-property: color, background-color;
+        }    
+    
+            &__icon{
+                fill: currentColor;
+        }
+    }
+
+    // .social__link--color{
+    //     background-color: transparent;
+    //     color: var(--icons-color);
+    
+    //     &:hover{
+    //         background-color: var(--accent-color);
+    //         color: var(--main-color);
+    //     }
