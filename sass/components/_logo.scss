@@ -6,22 +6,21 @@
     font-family: 'Raleway', sans-serif;
     @include font(700, 26px, 1.19, 0.03em);
 
-    &--header{
+    &__header{
         margin-right: 92px;
     }
 
-    &--black {
+    &__header--black {
         color: #000000;
     }
 
-    &--white{
+    &__footer{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    &__footer--white{
         color: var(--main-color);
     }
 }
-
-
-
-// .logo--web{
-//     color: var(--accent-color);
-// }
-

@@ -1,15 +1,5 @@
-.section__title{
+.title{
     text-align: center;
 
     @include font(700, 36px, 1.16, 0.03em);
 }
-
-.footer__title--font{
-    display: block;
-    @include font(700, 14px, 1.14, 0.03em);
-    text-transform: uppercase;
-    
-    color: var(--main-color);
-
-    margin-bottom: 20px;
-    }

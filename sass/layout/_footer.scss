@@ -1,4 +1,4 @@
-// FUTER
+// FOOTER
 
 .footer{
     padding-top: 60px;
@@ -9,22 +9,41 @@
         display: flex;
         align-items: baseline;
     }
+}
 
-    &__page{
-        margin: 0;
-        padding: 0;
+.footer-social{
+        margin-left: 70px;
+        margin-right: auto;
+        
+    &__title{
+        display: block;
+        @include font(700, 14px, 1.14, 0.03em);
+        text-transform: uppercase;
+        
+        color: var(--main-color);
+    
         margin-bottom: 20px;
+        }
     }
 
-    &__content--styly{
+    .social__link--footer{
+        background-color:  rgba(255, 255, 255, 0.1);
+        color: var(--main-color);
+    
+        &:hover{
+            background-color: var(--accent-color);
+            color: var(--main-color);
+        }
+    }
+
+.footer-address{
         font-style: normal;
-    }
 
-    &__item + .footer__item{
+    &__item + .footer-address__item{
         margin-top: 9px;
     }
 
-    &__address{
+    &__map-address{
         @include font(null, 14px, 1.7, 0.03em);
         color: var(--main-color);
     }
@@ -38,21 +57,6 @@
         &:focus,
         &:hover{
             color: var(--accent-color);
-        }
-    }
-
-    &__social{
-        margin-left: 70px;
-        margin-right: auto;
-    }
-        
-    &__social--color{
-        background-color:  rgba(255, 255, 255, 0.1);
-        color: var(--main-color);
-    
-        &:hover{
-            background-color: var(--accent-color);
-            color: var(--main-color);
         }
     }
 }

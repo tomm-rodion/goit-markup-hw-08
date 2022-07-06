@@ -1,8 +1,15 @@
-// clients
+// CLIENTS
 
 .clients{
-    &--title{
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title{
         margin-bottom: 50px;
+    }
+
+    &__container{
+        display: flex;
     }
 
     &__item{

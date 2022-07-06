@@ -9,20 +9,18 @@
 @import'./base/conteiner';
 
 // Components
-@import'./components/btn';
-@import'./components/social';
 @import'./components/logo';
-@import'./components/conteiner';
-@import'./components/modal';
+@import'./components/social';
 @import'./components/title';
-@import'./components/flex';
+@import'./components/btn';
+@import'./components/modal';
 
 // Layouts
 @import'./layout/header';
 @import'./layout/baner';
 @import'./layout/features';
-@import'./layout/works';
-@import'./layout/our-team';
+@import'./layout/services';
+@import'./layout/workers';
 @import'./layout/clients';
 @import'./layout/footer';
 @import'./layout/portfolio';

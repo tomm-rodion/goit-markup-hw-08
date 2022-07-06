@@ -1,3 +1,5 @@
+// HEADER
+
 .header{
     border-bottom: 1px solid #ececec;
 
@@ -11,75 +13,94 @@
 
 .nav {
     display: flex;
-    margin-left: auto;
 
-    .nav__item + .nav__item{
+    &__menu{
+        display: flex;
+    }
+
+    &__item + .nav__item{
         margin-left: 50px;
     }
 
-    &--icon{
-        margin-right: 10px;
-        fill: currentColor;
-
+    &__link{
+        display: block;
+        position: relative;
+        padding: 32px 0;
+        @include font(500, 14px, 1.14, 0.02em);
+        color:var(--text-color);
         @include animation();
-        transition-property: color, fill;
+        transition-property: color ; 
+    
+    &__link:hover{
+        color: var(--accent-color);
+    }
+    &::after{
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+    
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+    
+        @include animation();
+        transition-property: transform;
+        }
+    
+        &:hover::after{
+            transform: scaleX(1);
+        }
+    
+        &--activ::after {
+            transform: scaleX(1);
+            color: var(--accent-color);
+        }
+
+        &--activ{
+            color: var(--accent-color);
+        }
     }
 }
 
-.nav__link{
-    display: block;
-    position: relative;
-    padding: 32px 0;
-    @include font(500, 14px, 1.14, 0.02em);
-    color:var(--text-color);
-    @include animation();
-    transition-property: color ; 
 
-&--current::after{
-    position: absolute;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
+.contact{
+    display: flex;
+    margin-left: auto;
 
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-
-    @include animation();
-    transition-property: transform;
+    &__item + .contact__item{
+        margin-left: 50px;
     }
 
-    &--current:hover::after{
-        transform: scaleX(1);
-    }
-
-    &--activ.nav__link--current::after {
-        transform: scaleX(1);
-        color: var(--accent-color);
-        
-    }
-
-    &--contact{
+    &__link{
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 32px 0;
+        @include font(500, 14px, 1.14, 0.02em);
+        color:var(--text-color);
+        @include animation();
+        transition-property: color ;
         color:var(--second-text-color);
     }
 
-    &:hover,
-    &:focus,
-    &--contact:focus,
-    &--contact:hover,
-    &--activ{
-        color: var(--accent-color);
+    &__link:hover .contact__link--icon,
+    &__link:focus .contact__link--icon,
+    &__link:hover,
+    &__link:focus
+    {
+        color: var(--accent-color) ;
+        fill: var(--accent-color);
     }
 
-    &:hover .nav--icon,
-    &:focus .nav--icon,
-    &--contact:focus .nav--icon,
-    &--contact:hover .nav--icon
-    {
-    fill: var(--accent-color);
-}
-}
+    &__link--icon{
+    margin-right: 10px;
+    fill: currentColor;
 
+    @include animation();
+    transition-property: color, fill;
+    }
+}

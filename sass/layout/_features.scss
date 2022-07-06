@@ -1,4 +1,6 @@
 
+// block for FEATURES
+
 .features{
     display: flex;
     flex-wrap: wrap;
@@ -6,11 +8,11 @@
     &__item{
         width: 270px;
     }
-    .features__item+.features__item{
+    .features__item + .features__item{
         margin-left: 30px;
     }
 
-    &__svg{
+    &__wrapper{
         display:flex;
         align-items: center;
         justify-content: center;

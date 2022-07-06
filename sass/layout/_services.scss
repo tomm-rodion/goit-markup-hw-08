@@ -1,9 +1,15 @@
-.section-works {
+// SERVICES
+
+.services {
     display: flex;
     padding-bottom: 94px;
 
     &__title{
         margin-bottom: 50px;
+    }
+
+    &__container{
+        display: flex;
     }
 
     &__item{
@@ -15,7 +21,7 @@
         margin-right:0px;
     }
 
-    &__supplement-img{
+    &__supplement-wrapper{
         position: absolute;
         bottom: 0px;
     
@@ -24,10 +30,13 @@
         justify-content: center;
         width: 100%;
         height: 70px;
-        
+
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+
+    &__text{
         @include font(700, null, 1.14, 0.03em);
         text-transform: uppercase;
         color: #FFFFFF;
-        background-color: rgba(47, 48, 58, 0.8);
     }
 }

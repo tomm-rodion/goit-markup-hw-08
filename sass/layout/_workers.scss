@@ -1,0 +1,62 @@
+// TEAM OUR WORKERS
+
+.worker{
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    background-color: var(--fon-color);
+
+    &__title{
+        margin-bottom: 50px;
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        flex-basis: 270px;
+        background-color: var(--main-color);
+        font-size: 16px;
+        line-height: 1.19;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__item:not(:last-child){
+        margin-right: 30px;
+    }
+    
+    &__card{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    &__name{
+        margin-bottom: 10px;
+        @include font(500, 16px, 1.18, 0.03em);
+        text-align: center;
+        color: var(--text-color);
+    }
+
+    &__position{
+        @include font(null, 16px, 1.18, 0.03em);
+        text-align: center;
+        color: var(--second-text-color);
+    
+        margin-bottom: 16px;
+    }
+}
+
+.social__link--color{
+    background-color: transparent;
+    color: var(--icons-color);
+
+    &:hover{
+        background-color: var(--accent-color);
+        color: var(--main-color);
+    }
+}
