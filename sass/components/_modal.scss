@@ -168,7 +168,7 @@
 
 .modal__input:focus + .modal__icon,
 .modal__input:hover + .modal__icon,
-.modal__icon-close:hover{
+.modal__btn-close:hover{
     fill: var(--accent-color);
     transition-property: fill;
     transition-duration: 250ms;
