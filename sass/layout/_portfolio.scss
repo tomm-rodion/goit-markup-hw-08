@@ -1,132 +1,139 @@
 
-.button-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-}
+// MAIN CONTENT PORTFOLIO
 
-.buttons-item+.buttons-item{
-    margin-left: 8px;
-}
-
-.project-list{
+.filter-btn{
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
-}
-.project-list>.project-card{
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &__item + .filter-btn__item{
+        margin-left: 8px;
+    }
+
+    &__title{
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 22px;
+        padding-right: 22px;
+        border-radius: 4px;
+        border: 0;
     
-    margin-left: 30px;
-    margin-top: 30px;
+        @include font(500, 16px, 1.6, 0.03em);
+
+        background-color: #F5F4FA;
+        cursor: pointer;
+    
+        transition-property: background-color, color, box-shadow ;
+        @include animation();
+
+        &:focus,
+        &:hover,
+        &--active{
+            background-color: var(--accent-color);
+            color: var(--main-color);
+            box-shadow:0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+    }
 }
 
-.button-title{
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 22px;
-    padding-right: 22px;
-    border-radius: 4px;
-    border: 0;
+// projects list
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
-    background-color: #F5F4FA;
-    cursor: pointer;
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 
-    transition-property: background-color, color, box-shadow ;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &__link{
+        display: block;
+        
+        &:hover{
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+            transition-property: box-shadow;
+            @include animation();
+        }
+
+        &:hover .projects__overlay-text,
+        &:focus .projects__overlay-text{
+            transform: translateY(0);
+        }
+    }
+
+    &__wrapper{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__overlay-text{
+        position: absolute;
+        top:0;
+
+        @include font(null, 18px, 1.55, 0.03em);
+
+        color: var(--main-color);
+        background-color: rgba(33, 150, 243, 0.9);
+
+        padding: 63px 24px;
+
+        transform: translateY(100%);
+        transition-property:transform, color;
+        @include animation();
+    }
+    
+    &__container{
+        padding: 20px 24px;
+        border-left: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
+    }
+    
+    &__title{
+        margin-bottom: 4px;
+    
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2.0;
+        letter-spacing: 0.06em;
+        color: var(--text-color);
+    }
+    &__text{
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 0.03em;
+        color:var(--second-text-color);
+    }
 }
 
-.button-title:focus,
-.button-title:hover,
-.button-title:active,
-.button-title-active{
-    background-color: var(--accent-color);
-    color: var(--main-color);
-    box-shadow:0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 
-.card-container{
-    display: block;
-}
 
-.card-container:hover{
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition-property:box-shadow;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.project-thumb{
-    position: relative;
-    overflow: hidden;
-}
 
-.text-card{
-    position: absolute;
-    top:0;
-    padding: 63px 24px;
-    font-size: 18px;
-line-height: 1.55;
-letter-spacing: 0.03em;
-color: var(--main-color);
-background-color: rgba(33, 150, 243, 0.9);
-width: 100%;
-height: 100%;
-overflow: auto;
 
-transform: translateY(100%);
-transition-property:transform, background-color, color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* scrollbar styling css */
-.text-card::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
+
+// margin-left: -30px;
+// margin-top: -30px;
+// .projects>.project-card{
+    
+//     margin-left: 30px;
+//     margin-top: 30px;
+// }
+
+
+// /* scrollbar styling css */
+// .project__text::-webkit-scrollbar {
+//     width: 12px;               /* width of the entire scrollbar */
+//   }
   
-  .text-card::-webkit-scrollbar-track {
-    background: #FFD500;        /* color of the tracking area */
-  }
+// .project__text::-webkit-scrollbar-track {
+//     background: #FFD500;        /* color of the tracking area */
+//   }
   
-  .text-card::-webkit-scrollbar-thumb {
-    background-color: #005BBB;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid #FFD500;  /* creates padding around scroll thumb */
-  }
-
-.card-container:hover .text-card{
-    transform: translateY(0);
-}
-
-.card-thumb{
-    padding: 20px 24px;
-    border-left: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
-}
-
-.project-title-portfolio{
-    margin-bottom: 4px;
-
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2.0;
-    letter-spacing: 0.06em;
-    color: var(--text-color);
-}
-.project-title-text{
-    font-size: 16px;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-    color:var(--second-text-color);
-}
+//   .project__text::-webkit-scrollbar-thumb {
+//     background-color: #005BBB;    /* color of the scroll thumb */
+//     border-radius: 20px;       /* roundness of the scroll thumb */
+//     border: 3px solid #FFD500;  /* creates padding around scroll thumb */
+//   }
