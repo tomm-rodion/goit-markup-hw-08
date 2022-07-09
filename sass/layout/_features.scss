@@ -4,13 +4,21 @@
 .features{
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 
     &__item{
-        width: 270px;
+        width: 450px;
+
+        @media screen and (min-width:768px) {
+            width: calc((100% - 30px)/2);
+        }
+        @media screen and (min-width:1200px) {
+            width: calc((100% - 90px)/4);
+        }
     }
-    .features__item + .features__item{
-        margin-left: 30px;
-    }
+    // .features__item + .features__item{
+    //     margin-left: 30px;
+    // }
 
     &__wrapper{
         display:flex;
@@ -25,19 +33,19 @@
     
     &__title{
         margin-bottom: 10px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
+        @include font(700, 14px, 1.14, 0.03em);
+        text-align: center;
         text-transform: uppercase;
         color:var(--text-color) ;
+
+        @media screen and (min-width:768px) {
+            text-align: start;
+        }
     }  
     
     &__text{
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
-        color:var(--second-text-color) ;
-        
+        @include font(null, null, 1.71, 0.03em);
+
+        color:var(--second-text-color) ; 
     }
 }
