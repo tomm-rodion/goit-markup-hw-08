@@ -58,7 +58,12 @@
     flex-wrap: wrap;
     gap: 30px;
 
+    @media screen and (max-width:768px){
+        justify-content: center;
+    }
+
     &__card{
+        
         @media screen and (min-width: 768px) {
             width: calc((100% - 30px)/2);
             
@@ -96,6 +101,7 @@
     &__overlay-text{
         position: absolute;
         top:0;
+        height: 100%;
 
         @include font(null, 18px, 1.55, 0.03em);
 
@@ -116,6 +122,12 @@
         border-right: 1px solid #EEEEEE;
     }
 
+    @media screen and (min-width:768px) and (max-width:1200px){
+        .projects__card:first-child .projects__container{
+            padding-bottom: 56px;
+        }
+    }
+
     &__title{
         margin-bottom: 4px;
     
@@ -125,6 +137,7 @@
         letter-spacing: 0.06em;
         color: var(--text-color);
     }
+
     &__text{
         font-size: 16px;
         line-height: 1.8;

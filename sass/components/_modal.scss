@@ -30,12 +30,19 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
 
-        // @media screen and (max-width:768px) {
-        //     width: 450px;
-        //     height: 609px;
-        //     padding: 40px;
-        //     margin: auto;
-        // }
+        @media screen and (min-width: 480px ) and (max-width:768px) {
+            width: 450px;
+            height: 639px;
+            padding: 40px;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 479px ) {
+            width: 320px;
+            height: 649px;
+            padding: 40px;
+            
+        }
     }
 
     &__btn-close{

@@ -213,6 +213,21 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .modal__window {
+    width: 450px;
+    height: 639px;
+    padding: 40px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__window {
+    width: 320px;
+    height: 649px;
+    padding: 40px;
+  }
+}
 .modal__btn-close {
   position: absolute;
   top: 8px;
@@ -1122,6 +1137,11 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .projects {
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 768px) {
   .projects__card {
     width: calc((100% - 30px) / 2);
@@ -1152,6 +1172,7 @@ body {
 .projects__overlay-text {
   position: absolute;
   top: 0;
+  height: 100%;
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
@@ -1168,6 +1189,11 @@ body {
   border-left: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .projects .projects__card:first-child .projects__container {
+    padding-bottom: 56px;
+  }
 }
 .projects__title {
   margin-bottom: 4px;
