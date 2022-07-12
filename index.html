@@ -13,12 +13,17 @@
 </head>
 <body>
     <!-- шапка сайта HEADER -->
-    <header class="header hidden">
+    <header class="header">
         <div class="container header__container">
+            <!-- логотип logo -->
+            <a class="logo logo__header" href="./index.html">Web<span class="logo__header--black">Studio</span></a>
+            <button type="button" class="nav-btn">
+                <svg width="40px" height="40px">
+                    <use class="nav-btn__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <!-- посилання на сорінки Nav-menu block -->
             <nav class="nav">
-                <!-- логотип logo -->
-                <a class="logo logo__header" href="./index.html">Web<span class="logo__header--black">Studio</span></a>
-                <!-- посилання на сорінки Nav-menu block -->
                 <ul class="list nav__menu">
                     <li class="nav__item"><a class="nav__link nav__link--activ" href="./index.html">Студия</a></li>
                     <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
@@ -40,6 +45,51 @@
                             </svg>
                             +38 096 111 11 11</a></li>
                 </ul>
+        </div>
+        <!-- mobile header -->
+        <div class="mob-menu is-hidden">
+            <div class="container mob-menu__container">
+                <button type="button" class="nav-btn-close">
+                    <svg width="40px" height="40px">
+                        <use class="nav-btn-close__icon-close" href="./images/symbol-defs.svg#icon-close-menu"></use>
+                    </svg>
+                </button>
+                <nav class="mob-menu__nav">
+                    <ul class="list mob-menu__nav-menu">
+                        <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link--activ" href="./index.html">Студия</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="./portfolio.html">Портфолио</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="mob-menu__wrapper">
+                <ul class="list mob-menu__contact">
+                    <li class="mob-menu__item-contact">
+                        <a class="mob-menu__link-contact-tel" href="tel:380961111111">
+                            +38 096 111 11 11</a></li>
+                    <li class="mob-menu__item-contact">
+                        <a class="mob-menu__link-contact-email" href="mailto:info@devstudio.com">
+                            info@devstudio.com</a></li>
+                </ul>
+                <ul class="mob-menu__social-list">
+                    <li class="list mob-menu__social-item">
+                        <a href="https://www.instagram.com" 
+                        class="mob-menu__social-link">instagram</a>
+                    </li>
+                    <li class="list mob-menu__social-item">
+                        <a href="https://twitter.com/" 
+                        class="mob-menu__social-link">twitter</a>
+                    </li>
+                    <li class="list mob-menu__social-item">
+                        <a href="https://facebook.com/" 
+                        class="mob-menu__social-link">facebook</a>
+                    </li>
+                    <li class="list mob-menu__social-item">
+                        <a href="https://linkedin.com/" 
+                        class="mob-menu__social-link">linkedin</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
         </div>
     </header>
     <!-- MAIN CONTENT -->
@@ -102,15 +152,24 @@
                     <!-- workers cards -->
                         <ul class="list services__container">
                             <li class="services__item">
-                                <img class="services__img" src="./images/services-1.jpg" width="370" height="294" alt="Десктопные приложения">
+                                <img class="services__img" 
+                                srcset="./images/services-img/services-1.jpg 1x , ./images/services-img/services-1-2x.jpg 2x"
+                                src="./images/services-img/services-1.jpg" width="370" height="294" 
+                                alt="Десктопные приложения">
                             <div class="services__supplement-wrapper"><p class="services__text">Десктопные приложения</p></div>
                             </li>
                             <li class="services__item">
-                                <img class="services__img" src="./images/services-2.jpg" width="370" height="294" alt="Мобильные приложения">
+                                <img class="services__img" 
+                                srcset="./images/services-img/services-2.jpg 1x , ./images/services-img/services-2-2x.jpg 2x" 
+                                src="./images/services-img/services-2.jpg" width="370" height="294" 
+                                alt="Мобильные приложения">
                             <div class="services__supplement-wrapper"><p class="services__text">Мобильные приложения</p></div>
                             </li>
                             <li class="services__item">
-                                <img class="services__img" src="./images/services-3.jpg" width="370" height="294" alt="Дизайнерские решения">
+                                <img class="services__img" 
+                                srcset="./images/services-img/services-3.jpg 1x , ./images/services-img/services-3-2x.jpg 2x" 
+                                src="./images/services-img/services-3.jpg" width="370" height="294" 
+                                alt="Дизайнерские решения">
                             <div class="services__supplement-wrapper"><p class="services__text">Дизайнерские решения</p></div>
                             </li>
                         </ul>
@@ -125,7 +184,24 @@
                 <div class="container">
                 <ul class="list worker__list">
                 <li class="worker__item">
-                    <img class="worker__img" src="./images/worker-1.jpg" width="270" height="260" alt="foto Product Designer">
+                    <picture>
+                        <source  
+                        srcset="
+                        ./images/workers-img/worker-1-desk.jpg   1x, 
+                        ./images/workers-img/worker-1-desk-2x.jpg 2x"
+                        media="(min-width:1200px)" />
+                        <source 
+                        srcset="
+                        ./images/workers-img/worker-1-tab.jpg 1x, 
+                        ./images/workers-img/worker-1-tab-2x.jpg 2x" 
+                        media="(min-width:768px)"/>
+                        <source srcset="
+                        ./images/workers-img/worker-1-mob.jpg 1x, 
+                        ./images/workers-img/worker-1-mob-2x.jpg 2x" 
+                        media="(min-width:320px)"/>
+                        <img class="worker__img" src="./images/workers-img/worker-1-desk.jpg" 
+                        width="270" height="260" alt="foto Product Designer">
+                    </picture>
                     <div class="worker__card">
                     <h3 class="worker__name">Игорь Демьяненко</h3>
                     <p class="worker__position">Product Designer</p>
@@ -163,7 +239,24 @@
                 </li> 
                 
                 <li class="worker__item">
-                    <img class="worker__img" src="./images/worker-2.jpg" width="270" height="260" alt="foto Frontend Developer">
+                <picture>   
+                    <source  
+                        srcset="
+                        ./images/workers-img/worker-2-desk.jpg   1x, 
+                        ./images/workers-img/worker-2-desk-2x.jpg 2x"
+                        media="(min-width:1200px)" />
+                        <source 
+                        srcset="
+                        ./images/workers-img/worker-2-tab.jpg 1x, 
+                        ./images/workers-img/worker-2-tab-2x.jpg 2x" 
+                        media="(min-width:768px)"/>
+                        <source srcset="
+                        ./images/workers-img/worker-2-mob.jpg 1x, 
+                        ./images/workers-img/worker-2-mob-2x.jpg 2x" 
+                        media="(min-width:320px)"/>
+                        <img class="worker__img" src="./images/workers-img/worker-2-desk.jpg" 
+                        width="270" height="260" alt="foto Frontend Developer">
+                    </picture>
                     <div class="worker__card">
                     <h3 class="worker__name">Ольга Репина</h3>
                     <p class="worker__position">Frontend Developer</p>
@@ -201,7 +294,24 @@
                 </li>  
                 
                 <li class="worker__item">
-                    <img class="worker__img" src="./images/worker-3.jpg" width="270" height="260" alt="foto Marketing">
+                    <picture>
+                        <source  
+                        srcset="
+                        ./images/workers-img/worker-3-desk.jpg   1x, 
+                        ./images/workers-img/worker-3-desk-2x.jpg 2x"
+                        media="(min-width:1200px)" />
+                        <source 
+                        srcset="
+                        ./images/workers-img/worker-3-tab.jpg 1x, 
+                        ./images/workers-img/worker-3-tab-2x.jpg 2x" 
+                        media="(min-width:768px)"/>
+                        <source srcset="
+                        ./images/workers-img/worker-3-mob.jpg 1x, 
+                        ./images/workers-img/worker-3-mob-2x.jpg 2x" 
+                        media="(min-width:320px)"/>
+                        <img class="worker__img" src="./images/workers-img/worker-3-desk.jpg" 
+                        width="270" height="260" alt="foto Marketing">
+                    </picture>
                     <div class="worker__card">
                     <h3 class="worker__name">Николай Тарасов</h3>
                     <p class="worker__position">Marketing</p>
@@ -239,7 +349,24 @@
                 </li>  
                 
                 <li class="worker__item">
-                    <img class="worker__img" src="./images/worker-4.jpg" width="270" height="260" alt="foto UI Designer">
+                    <picture>
+                        <source  
+                        srcset="
+                        ./images/workers-img/worker-4-desk.jpg   1x, 
+                        ./images/workers-img/worker-4-desk-2x.jpg 2x"
+                        media="(min-width:1200px)" />
+                        <source 
+                        srcset="
+                        ./images/workers-img/worker-4-tab.jpg 1x, 
+                        ./images/workers-img/worker-4-tab-2x.jpg 2x" 
+                        media="(min-width:768px)"/>
+                        <source srcset="
+                        ./images/workers-img/worker-4-mob.jpg 1x, 
+                        ./images/workers-img/worker-4-mob-2x.jpg 2x" 
+                        media="(min-width:320px)"/>
+                        <img class="worker__img" src="./images/workers-img/worker-4-desk.jpg" 
+                        width="270" height="260" alt="foto UI Designer">
+                    </picture>
                     <div class="worker__card">
                     <h3 class="worker__name">Михаил Ермаков</h3>
                     <p class="worker__position">UI Designer</p>
@@ -464,5 +591,6 @@
     </div>
     <!-- JS -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

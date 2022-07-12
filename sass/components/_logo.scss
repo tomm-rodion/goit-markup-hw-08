@@ -6,6 +6,10 @@
     font-family: 'Raleway', sans-serif;
     @include font(700, 26px, 1.19, 0.03em);
 
+    @media screen and (max-width:768px) {
+        padding: 16px 0;
+    }
+
     &__header{
         margin-right: 92px;
     }
