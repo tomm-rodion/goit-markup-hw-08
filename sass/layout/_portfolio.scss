@@ -113,6 +113,11 @@
         transform: translateY(100%);
         transition-property:transform, color;
         @include animation();
+
+        @media screen and (max-width:400px){
+            font-size: 14px;
+            padding-top: 34px;
+        }
     }
     
     &__container{

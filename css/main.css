@@ -1190,6 +1190,12 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 400px) {
+  .projects__overlay-text {
+    font-size: 14px;
+    padding-top: 34px;
+  }
+}
 .projects__container {
   padding: 20px 24px;
   border-left: 1px solid #EEEEEE;
