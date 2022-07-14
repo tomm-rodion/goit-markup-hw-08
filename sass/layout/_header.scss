@@ -34,9 +34,9 @@
 // header navigation
 
 .nav {
-    display: flex;
-    @media screen and (max-width:768px) {
-        display: none;
+    display: none;
+    @media screen and (min-width:768px) {
+        display: flex;
     }
     
 
@@ -94,7 +94,7 @@
 
 
 .contact{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     width: 161px;
     margin-left: auto;
@@ -103,8 +103,8 @@
         width: auto;
     }
 
-    @media screen and (max-width:768px) {
-        display: none;
+    @media screen and (min-width:768px) {
+        display: flex;
     }
 
     &__item:not(:last-child){
@@ -215,8 +215,11 @@
         margin-bottom: 32px;
     }
     &__link-contact-tel {
-        @include font (500, 34px, 1.25, 0.02em);
+        @include font (500, 24px, 1.25, 0.02em);
         color: var(--accent-color) ;
+        @media screen and (min-width:480px) {
+            font-size: 34px;
+        }
     }
     &__link-contact-email{
         @include font (500, 24px, 1.16, 0.02em);
