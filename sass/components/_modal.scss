@@ -121,6 +121,7 @@
     
     &__input-check{
         visibility: hidden;
+        position: absolute;
     }
     
     &__checkbox-text{
@@ -133,6 +134,10 @@
     &__checkbox-text, &__link{
         @include font(null, 14px, 1.71, 0.03em);
         color: #757575;
+        
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            font-size: 12px;
+        }
     }
 
     &__link{

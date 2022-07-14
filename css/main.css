@@ -298,6 +298,7 @@ body {
 }
 .modal__input-check {
   visibility: hidden;
+  position: absolute;
 }
 .modal__checkbox-text {
   display: flex;
@@ -310,6 +311,11 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal__checkbox-text, .modal__link {
+    font-size: 12px;
+  }
 }
 .modal__link {
   color: #2196F3;
@@ -598,7 +604,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 10px 0;
+  padding: 5px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -608,6 +614,11 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
   color: var(--second-text-color);
+}
+@media screen and (min-width: 768px) {
+  .contact__link {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contact__link {
@@ -625,7 +636,20 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color, fill;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__link--icon {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+  }
+}
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact .contact__item:last-child > .contact__link > .contact__link--icon {
+    width: 10px;
+    height: 14px;
+  }
+}
 .nav-btn-close {
   position: absolute;
   padding: 0;
