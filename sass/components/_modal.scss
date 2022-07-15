@@ -208,11 +208,6 @@
 // MODAL FORM FOR FOOTER
 
 .footer-modal{
-    width: 570px;
-
-    @media screen and (min-width:768px) and (max-width:1199px) {
-        margin: 0 auto;
-    }
 
     &__title{
         display: block;
@@ -231,17 +226,18 @@
     }
     
     .footer-form{
-        display: flex;
-        align-items: center;
-
-        @media screen and (max-width:1199px) {
-            flex-wrap: wrap;
-            width: 100%;
+        @media screen and (min-width:1200px) {
+            display: flex;
+            align-items: center;
         }
 
         &__wrapper{
             position: relative;
             margin: 0 auto;
+
+            @media screen and (max-width:479px) {
+                width: 290px;
+            }
 
             @media screen and (min-width:768px) {
                 margin: 0 auto;
